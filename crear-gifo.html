@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto GIFOS</title>
+
+    <link rel="stylesheet" id="styles" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" id="media" type="text/css" href="styles/media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>    
+<body>
+    <header id="header" class="header">
+            <div id="id-logo" class="logo"></div>
+            <nav class="mobile-menu">
+                <input type="checkbox" id="show-menu"/>
+                <label for="show-menu" class="show-menu"> 
+                        <span class="botonMenu-linea"></span>
+                        <span class="botonMenu-linea"></span>
+                        <span class="botonMenu-linea"></span>                   
+                </label>   
+                <ul id="menu">
+                    <li><a class="darkModeButton" id="darkMode" href="#">Modo Nocturno</a></li>
+                    <hr class="l-line">
+                    <li><a href="favoritos.html">Favoritos</a></li>
+                    <hr class="l-line">
+                    <li><a href="mis-gifos.html">Mis GIFOS</a></li>
+                    <hr class="l-line">
+                    <li><a href="crear-gifo.html" id="create-gifo" class="more-info"></a></li>
+                </ul> 
+                      
+            </nav>
+       
+    </header>
+    <main>
+            <!-- Crear GIFO -->
+            <section class="search__section">
+                <div class="title">
+                    <div class="image-camera">
+                        <img id="cinta1" src="./images/element_cinta1.svg" alt="cinta">
+                        <img id="cinta2" src="./images/element_cinta2.svg" alt="cinta">
+                        <img id="camera" src="./images/element-camara.svg" alt="camera">
+                        <img id="luz" src="./images/element-luz-camara.svg" alt="luz">
+                    </div>
+                    
+                    <div class="box">
+                        <video id="video" class="video">
+                        </video> 
+                        <img id="showGif" class="video is-hidden" src="images/eyedesyn04.gif" alt="">  
+                        <div id="uploading" class="message-purple is-hidden">
+                            <div class="icons__slide">
+                                <img class="icon-download" data-obj-id="${id}" data-obj-url="${url}" onclick="downloadGifos(this)" src="images/icon-download.svg" alt="Download">
+                                <img class="icon-max" data-obj-id="${id}" data-obj-url="${url}" onclick="maxGifos(this)" src="images/icon-link.svg" alt="Max GIFOS">
+                            </div>
+                            <img id="icon-load" class="loading" src="./images/spinner-solid.svg" alt="loading">
+                            <h4 id="message_p" class="camera">Estamos subiendo tu GIFO</h4>
+                        </div>
+                        <div class="box--inner">
+                            <h2 id="message_title" class="camera">Aquí podrás <br/>crear tus propios <span class="green">GIFOS</span></h2>
+                            <h4 id="message_text" >¡Crea tu GIFO en sólo 3 pasos! <br/>(sólo necesitas una cámara para grabar un video)</h4>
+                        </div>
+                    </div>
+                    <ul class="btn__step"> 
+                        <li id="btn1" class="btn__step-item">1</li>
+                        <li id="btn2" class="btn__step-item">2</li>
+                        <li id="btn3" class="btn__step-item">3</li>  
+                    </ul>
+                    <div class="line-purple">
+                    </div> 
+                </div>
+                <a id="btn-camera" class="button__video">comenzar</a>
+                <a id="btn-start" class="button__video">grabar</a>
+                <a id="btn-stop" class="button__video">finalizar</a>
+                <a id="btn-upload" class="button__video">subir gifo</a>
+            </section>      
+        </main>
+        <footer class="footer">
+            <div class="footer-social-icons">
+                <h4>Compartir en:</h4>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/" Target="_blank" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=es" Target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=es-la" Target="_blank" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+                </ul>
+                <h4>© GIFOS 2020 All Rights Reserved.</h4>
+            </div>
+        </footer>       
+    
+        <!-- Archivos JS-->
+        <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
+        <script src="script/dark_mode-camera.js"></script>
+        <script src="script/buttons.js"></script>
+        <script src="script/camera.js"></script>
+        <script src="script/download.js"></script>
+</body>
+</html>

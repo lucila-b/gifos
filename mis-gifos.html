@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto GIFOS</title>
+
+    <link rel="stylesheet" id="styles" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" id="media" type="text/css" href="styles/media.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>    
+<body>
+    <header id="header" class="header">
+            <div id="id-logo" class="logo"></div>
+            <!--Buscador en el nav-->
+            <div id="search--nav" class="search--wrapper-nav" style="visibility: hidden">
+                <form id="search-form-nav" class="search--form">
+                    <div class="search--input-wrapper">
+                        <input class="search--input border-b" type="text" id="search-input-nav" placeholder="Busca GIFOS y más" autocomplete="off">
+                        <input id="button--search-nav" class="search--submit"  type="image" alt="search" src="images/icon-search.svg"/>
+                    </div>
+                </form>
+            </div>
+            <!--Final buscador en el nav-->
+            <nav class="mobile-menu">
+                <input type="checkbox" id="show-menu"/>
+                <label for="show-menu" class="show-menu"> 
+                        <span class="botonMenu-linea"></span>
+                        <span class="botonMenu-linea"></span>
+                        <span class="botonMenu-linea"></span>                   
+                </label>   
+                <ul id="menu">
+                    <li><a class="darkModeButton" id="darkMode" href="#">Modo Nocturno</a></li>
+                    <hr class="l-line">
+                    <li><a href="favoritos.html">Favoritos</a></li>
+                    <hr class="l-line">
+                    <li><a href="mis-gifos.html">Mis GIFOS</a></li>
+                    <hr class="l-line">
+                    <li><a href="crear-gifo.html" id="create-gifo" class="more-info"></a></li>
+                </ul> 
+                      
+            </nav>
+       
+    </header>
+    <main>
+            <!-- Mis GIFOS -->
+            <section class="search__section">
+                <div class="title">
+                    <img class="margin-bottom" src="images/icon-mis-gifos.svg" alt="Mis Gifos">
+                    <h2>Mis GIFOS</h2>
+                </div>  
+                <!-- No Content --> 
+                <div id="no-content" class="title">
+                    <img class="margin-bottom margin_top icon--fav" src="images/icon-mis-gifos-sin-contenido.svg" alt="Mis GIFOS">
+                    <h3 class="green">¡Anímate a crear tu primer GIFO!</h3>
+                </div> 
+                <div  id="gifos-results" class="grid__search">
+                    <!-- Resultados de gifs guardados --> 
+                </div>
+                <a id="more-gifos-button" class="button__more is-hidden">ver más</a>
+            </section>
+            <!-- AREA GRIS -->
+            <section class="bg--grey" id="trending">
+                <div class="title">
+                    <h2>Trending GIFOS</h2>
+                    <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+                </div>
+                <!-- CAROUSEL GALLERY-->
+                <div class="carousel">
+                    <button class="carousel__button carousel__button--left is-hidden">
+                        <img src="images/button-left.svg" alt="Left">
+                    </button>
+                    <div class="carousel__track-container">
+                         <!-- gif Images here -->
+                        <ul id="giphy_images" class="carousel__track">
+                           <li class="carousel__slide current-slide">
+                               <img class="carousel__images" src="images/homer.gif" alt="">
+                           </li>
+                           <li class="carousel__slide">
+                                <img class="carousel__images" src="images/eyedesyn04.gif" alt="">
+                            </li>
+                           <li class="carousel__slide">
+                                <img class="carousel__images" src="images/eyedesyn0.gif" alt="">
+                           </li> 
+                           <li class="carousel__slide">
+                            <img class="carousel__images" src="images/tenor.gif" alt="">
+                            </li> 
+                            <li class="carousel__slide">
+                            <img class="carousel__images" src="images/gato.jpg" alt="">
+                            </li>    
+                        </ul>
+                    
+                    </div>
+                    <button class="carousel__button carousel__button--right">
+                        <img src="images/button-right.svg" alt="Right">
+                    </button>
+
+                    <div id="dots" class="carousel__nav">
+                        <button class="carousel__indicator current-slide"></button>
+                        <button class="carousel__indicator"></button>
+                        <button class="carousel__indicator"></button>
+                        <button class="carousel__indicator"></button>
+                        <button class="carousel__indicator"></button>
+                    </div>
+                
+                </div>   
+            </section>
+            <!-- AMPLIAR GIFOS-->
+            <section>
+                <div id='max--gifos' class="modal__max is-hidden">
+                    <div class="modal__slide">
+                        <button class="modal__button-close">
+                            <img src="images/button-close.svg" alt="Close">
+                        </button>
+                        <img class="modal__images" src="images/eyedesyn04.gif" alt="">
+                        <div class="detail__max">
+                            <div class="title__max">
+                                <h4 class="user--style left">User</h4>
+                                <h3 class="black--color left">Titulo GIFO</h3>
+                            </div>
+                            <img class="icon__fav" data-obj-id='' data-obj-url='' data-obj-user='' data-obj-title='' onclick="addFavGifos(this)" src="images/icon-fav-hover.svg" alt="Favoritos">
+                            <img class="icon__download" data-obj-id='' data-obj-url='' data-obj-user='' data-obj-title='' onclick="downloadGifos(this)" src="images/icon-download.svg" alt="Download">
+                        </div>   
+                    </div>
+                </div>
+            </section>
+            <!-- FIN AMPLIAR GIFOS-->
+        </main>
+        <footer class="footer">
+            <div class="footer-social-icons">
+                <h4>Compartir en:</h4>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/" Target="_blank" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=es" Target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=es-la" Target="_blank" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+                </ul>
+                <h4>© GIFOS 2020 All Rights Reserved.</h4>
+            </div>
+        </footer>       
+    
+        <!-- Archivos JS-->
+        <script src="script/gallery-mobile.js"></script>
+        <script src="script/api.js"></script>
+        <script src="script/gallery.js"></script>
+        <script src="script/dark_mode.js"></script>
+        <script src="script/carousel.js"></script>
+        <script src="script/buttons.js"></script>
+        <script src="script/download.js"></script>
+        <script src="script/mygifos.js"></script>
+</body>
+</html>
