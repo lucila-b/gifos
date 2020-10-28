@@ -1,0 +1,74 @@
+/* REDES SOCIALES */
+
+.footer-social-icons {
+  max-width: 16em;
+  margin: 0 auto 1.5em auto; 
+}
+
+.social-icons {
+  display: flex;
+  max-width: 5.8em;
+  justify-content: space-between;
+  align-content: center;
+  margin: 1em auto 2em auto; 
+}
+
+.social-icon {
+  justify-content: center;
+  color: #CDD6E0;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s; 
+}
+
+.social-icons li {
+  vertical-align: top;
+  display: inline; 
+}
+
+.social-icons a {
+  color: #CDD6E0;
+  text-decoration: none; 
+}
+
+.fa-twitter {
+  
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s; 
+}
+
+.fa-twitter:hover {
+  color: #4A1EE3;
+}
+
+.fa-instagram {
+  
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s; 
+}
+
+.fa-instagram:hover {
+  color: #4A1EE3;
+}
+
+.fa-facebook {
+  
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s; 
+}
+
+.fa-facebook:hover {
+  color: #4A1EE3;
+}
+
