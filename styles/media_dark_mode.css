@@ -334,6 +334,11 @@
     display: block;
     opacity: 1;
   }
+
+  a#create-gifo {
+    display: block;
+  } 
+
   .logo {
     width: 3.6em;
     height: 3.4em;

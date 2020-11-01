@@ -88,10 +88,7 @@
   .l-line {
     display: none;
   }
-  .more-info {
-    display: block;
-    opacity: 1;
-  }
+
   a#create-gifo {
     display: none;
   }
@@ -345,6 +342,14 @@
     padding-top: 5em;
     padding-left: 1.3em; 
   }
+  .more-info {
+    display: block;
+    opacity: 1;
+  } 
+  
+  a#create-gifo {
+    display: block;
+  } 
 
   .button {
     width: 16em; 

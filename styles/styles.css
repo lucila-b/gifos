@@ -78,9 +78,13 @@ header {
   border: 0;
   margin: 2.2em auto 3em auto; }
 
+a#create-gifo {
+  display: none;
+}
+
 .more-info {
   display: none;
-  opacity: 0;
+  opacity: 1;
   background-image: url(../images/button-crear-gifo.svg);
   background-repeat: no-repeat;
   background-position: 1.25em 1.25em;
