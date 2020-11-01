@@ -332,6 +332,7 @@
   }
   .more-info {
     display: block;
+    opacity: 1;
   }
   .logo {
     width: 3.6em;

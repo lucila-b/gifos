@@ -80,6 +80,7 @@ header {
 
 .more-info {
   display: none;
+  opacity: 0;
   background-image: url(../images/button-crear-gifo.svg);
   background-repeat: no-repeat;
   background-position: 1.25em 1.25em;
