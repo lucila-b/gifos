@@ -187,7 +187,6 @@ function addMyGifos(obj) {
     
     buttonDownloadNewGifo.setAttribute('data-obj-url', url)
     buttonLinkNewGifo.setAttribute('href', url)
-    buttonLinkNewGifo.setAttribute('data-obj-url', url)
     buttonDownloadNewGifo.setAttribute('data-obj-id', id)
     buttonLinkNewGifo.setAttribute('data-obj-id', id)
         }
