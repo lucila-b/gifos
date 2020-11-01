@@ -26,7 +26,8 @@ const btnStep1 = document.getElementById('btn1')
 const btnStep2 = document.getElementById('btn2')
 const btnStep3 = document.getElementById('btn3')
 const uploading = document.getElementById('uploading')
-
+const buttonDownloadNewGifo = document.getElementById('new-gifo-download')
+const buttonLinkNewGifo = document.getElementById('new-gifo-link')
 
 init.setAttribute('style', 'display: block')
 
@@ -73,6 +74,7 @@ async function initiateWebcam() {
         // Se muestra el gif
         video.classList.add('is-hidden')
         showGif.classList.remove('is-hidden')
+
         // Cambian botones
         stop.setAttribute('style', 'display: none')
         uploadGif.setAttribute('style', 'display: block')
@@ -84,7 +86,7 @@ async function initiateWebcam() {
         showGif.src = blobSave
 
         // metodo para bajar los gifs
-        invokeSaveAsDialog(blob)
+        //invokeSaveAsDialog(blob)
 
         // Subir GIF creado
         async function uploadCreatedGif() {
@@ -130,6 +132,7 @@ async function initiateWebcam() {
 
             // guardarlo en localstorage
             addMyGifos(response)
+            completeButtons(response)
             return response
           
             
@@ -164,8 +167,6 @@ init.addEventListener('click', () => {
 // Guardar mis gifos en localstorage
 
 function addMyGifos(obj) {
-    // var myGifos = new Array
-    // myGifos.push(obj) 
     let newData = obj
 
     if(localStorage.getItem('localMyGifos') == null){
@@ -179,3 +180,14 @@ function addMyGifos(obj) {
         console.log('gifo guardado en localstorage')
     }     
 
+    // Completamos datos de los botones
+    function completeButtons(obj) {
+        const id = obj.data.id
+        const url = `https://media.giphy.com/media/${id}/giphy.gif`
+    
+    buttonDownloadNewGifo.setAttribute('data-obj-url', url)
+    buttonLinkNewGifo.setAttribute('href', url)
+    buttonLinkNewGifo.setAttribute('data-obj-url', url)
+    buttonDownloadNewGifo.setAttribute('data-obj-id', id)
+    buttonLinkNewGifo.setAttribute('data-obj-id', id)
+        }

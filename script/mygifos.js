@@ -42,7 +42,6 @@ function savedGifosView () {
                         <div class="icons__slide">
                             <img id="${id}-remove" class="icon-fav" data-obj-id="${id}" src="images/icon_trash.svg" onclick="removeFavGifos(this)" alt="My Gifos">
                             <img class="icon-download" data-obj-id="${id}" data-obj-url="${url}" onclick="downloadGifos(this)" src="images/icon-download.svg" alt="Download">
-                            <img class="icon-max" data-obj-id="${id}" data-obj-url="${url}" onclick="maxGifos(this)" src="images/icon-max.svg">
                         </div>
                     </div>
                 </div>`
@@ -64,7 +63,6 @@ function savedGifosView () {
                     <div class="icons__slide">
                         <img id="${id}-remove" class="icon-fav" data-obj-id="${id}" src="images/icon_trash.svg" onclick="removeMyGifos(this)" alt="My Gifos">
                         <img class="icon-download" data-obj-id="${id}" data-obj-url="${url}" onclick="downloadGifos(this)" src="images/icon-download.svg" alt="Download">
-                        <img class="icon-max" data-obj-id="${id}" data-obj-url="${url}" onclick="maxGifos(this)" src="images/icon-max.svg">
                     </div>
                 </div>
             </div>`
@@ -87,7 +85,6 @@ function removeMyGifos(obj) {
     localStorage.setItem('localMyGifos', JSON.stringify(data))
     document.getElementById(obj.id).parentElement.parentElement.parentElement.remove()
   }
-    
 // Boton VER MAS gifs
 moreGifos.addEventListener('click', () => {
     limitMinG = limitMin + 12;
