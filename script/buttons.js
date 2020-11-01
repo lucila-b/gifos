@@ -17,13 +17,16 @@ function maxGifos(obj) {
   currentGif.src = obj.getAttribute("data-obj-url")
   currentTitle.innerText = obj.getAttribute("data-obj-title") 
   currentUser.innerText = obj.getAttribute("data-obj-user")
+  id = obj.getAttribute("data-obj-id")
   // Completamos datos de los botones
   buttonFavModal.setAttribute('data-obj-url', obj.getAttribute("data-obj-url"))
   buttonFavModal.setAttribute('data-obj-title', obj.getAttribute("data-obj-title"))
   buttonFavModal.setAttribute('data-obj-user', obj.getAttribute("data-obj-user"))
+  buttonFavModal.setAttribute('data-obj-id', obj.getAttribute("data-obj-id"))
   buttonDownloadModal.setAttribute('data-obj-url', obj.getAttribute("data-obj-url"))
   buttonDownloadModal.setAttribute('data-obj-title', obj.getAttribute("data-obj-title"))
   buttonDownloadModal.setAttribute('data-obj-user', obj.getAttribute("data-obj-user"))
+  buttonDownloadModal.setAttribute('data-obj-id', obj.getAttribute("data-obj-id"))
   // Boton cerrar
   buttonClose.addEventListener("click", () => {
       screenMax.classList.add('is-hidden') 
