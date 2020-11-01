@@ -126,8 +126,8 @@
                                 <h4 class="user--style left">User</h4>
                                 <h3 class="black--color left">Titulo GIFO</h3>
                             </div>
-                            <img class="icon__fav" data-obj-id='' data-obj-url='' data-obj-user='' data-obj-title='' onclick="addFavGifos(this)" src="images/icon-fav-hover.svg" alt="Favoritos">
-                            <img class="icon__download" data-obj-id='' data-obj-url='' data-obj-user='' data-obj-title='' onclick="downloadGifos(this)" src="images/icon-download.svg" alt="Download">
+                            <img id="mygifo-modal-fav" class="icon__fav" data-obj-id='' data-obj-url='' onclick="addFavGifos(this)" src="images/icon-fav-hover.svg" alt="Favoritos">
+                            <img id="mygifo-modal-download" class="icon__download" data-obj-id='' data-obj-url='' onclick="downloadGifos(this)" src="images/icon-download.svg" alt="Download">
                         </div>   
                     </div>
                 </div>
@@ -154,6 +154,7 @@
         <script src="script/carousel.js"></script>
         <script src="script/buttons.js"></script>
         <script src="script/download.js"></script>
+        <script src="script/favoritos.js"></script>
         <script src="script/mygifos.js"></script>
 </body>
 </html>
