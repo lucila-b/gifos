@@ -27,7 +27,6 @@ function addFavGifos(obj) {
       old_data.push(newFav);
       // save the old + new data to local storage
       localStorage.setItem('localFavList', JSON.stringify(old_data))
-      alert('Agregaste este gif a Favoritos') 
       favoritosView()
  } 
 
