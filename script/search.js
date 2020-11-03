@@ -7,6 +7,7 @@ searchForm.addEventListener('submit', function(e) {
     lastResults.style.display = "none"
     const q = searchInput.value
     search(q, limit = 24) 
+    cleanInput()
     
 })
 
@@ -17,7 +18,8 @@ buttonSearch.addEventListener('click', function(e) {
     moreResults.style.display = "block"
     lastResults.style.display = "none"
     const q = searchInput.value
-    search(q, limit = 24)    
+    search(q, limit = 24) 
+    cleanInput()   
 })
 
 searchForm.addEventListener('keyup', function(e) {
@@ -45,5 +47,10 @@ function closeInput() {
     document.getElementById("button--search").classList.remove('search--close');
     resultCompleta.classList.add('is-hidden')
 }
+
+function cleanInput() {
+    searchInput.value = ""
+}
+
 /////////////  FIN EVENTOS BUSQUEDA  ///////////////////
 

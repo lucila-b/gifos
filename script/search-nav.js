@@ -5,7 +5,8 @@ searchFormNav.addEventListener('submit', function(e) {
     moreResults.style.display = "block"
     lastResults.style.display = "none"
     const q = searchInputNav.value
-    search(q, limit = 24)  
+    search(q, limit = 24) 
+    cleanInputNav() 
 })
 
 buttonSearchNav.addEventListener('click', function(e) {
@@ -15,4 +16,9 @@ buttonSearchNav.addEventListener('click', function(e) {
     lastResults.style.display = "none"
     const q = searchInputNav.value
     search(q, limit = 24) 
+    cleanInputNav()
 })
+
+function cleanInputNav() {
+    searchInputNav.value = ""
+}
