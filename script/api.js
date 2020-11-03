@@ -10,6 +10,7 @@ const searchTitle = document.getElementById('id-search')
 const searchSection = document.getElementById('search-section')
 const buttonSearch = document.getElementById("button--search")
 const buttonSearchNav = document.getElementById("button--search-nav")
+const buttonClose = document.getElementById("button--search-close")
 const moreResults = document.getElementById("more-results-button")
 const lastResults = document.getElementById("last-results-button")
 

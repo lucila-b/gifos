@@ -6,7 +6,7 @@ searchForm.addEventListener('submit', function(e) {
     moreResults.style.display = "block" 
     lastResults.style.display = "none"
     const q = searchInput.value
-    search(q, limit = 24) 
+    search(q, limit = 12) 
     cleanInput()
     
 })
@@ -18,23 +18,22 @@ buttonSearch.addEventListener('click', function(e) {
     moreResults.style.display = "block"
     lastResults.style.display = "none"
     const q = searchInput.value
-    search(q, limit = 24) 
-    cleanInput()   
+    search(q, limit = 12) 
+    cleanInput()  
 })
 
 searchForm.addEventListener('keyup', function(e) {
-        const q = searchInput.value
-        openInput()
-        completeWords(q, limit = 6) 
+    const q = searchInput.value
+    openInput()
+    completeWords(q, limit = 6) 
 })
 
 function openInput() {
     // Aplicamos estilos a input y aparece listado
     let input = document.getElementById('search-input')
     input.classList.remove('border-b')
-    document.getElementById("button--search").src="./images/close.svg"
-    document.getElementById("button--search").classList.remove('search--submit')
-    document.getElementById("button--search").classList.add('search--close');
+    buttonSearch.setAttribute('style', 'display: none')
+    buttonClose.setAttribute('style', 'display: block')
     resultCompleta.classList.remove('is-hidden')
 }
 
@@ -42,9 +41,8 @@ function closeInput() {
     // Aplicamos estilos a input y desaparece listado
     let input = document.getElementById('search-input')
     input.classList.add('border-b')
-    document.getElementById("button--search").src="./images/icon-search.svg"
-    document.getElementById("button--search").classList.add('search--submit')
-    document.getElementById("button--search").classList.remove('search--close');
+    buttonSearch.setAttribute('style', 'display: block')
+    buttonClose.setAttribute('style', 'display: none')
     resultCompleta.classList.add('is-hidden')
 }
 
@@ -52,5 +50,10 @@ function cleanInput() {
     searchInput.value = ""
 }
 
+buttonClose.addEventListener('click', function(e){
+    e.preventDefault()
+    cleanInput()
+    closeInput()
+})
 /////////////  FIN EVENTOS BUSQUEDA  ///////////////////
 
